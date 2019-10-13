@@ -25,7 +25,7 @@ public class TestController {
     @GetMapping("/{test}")
     public Result test(@PathVariable("test") String testStr) {
         Map<String, String> data = new HashMap<>();
-        data.put("testVal", null);
+        data.put("testVal", testStr);
         return Result.builder()
                 .code(SUCCESS.getCode())
                 .data(data)
